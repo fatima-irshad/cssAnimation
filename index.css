@@ -1,14 +1,46 @@
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.images{
+    display: flex;
+    justify-content: space-around;
+}
+
 .image-container {
 display: flex;
 justify-content: center;
 align-items: center;
+position: relative;
 width:500px;
 height:800px;
 }
 
 .image-container  img{
-
 width: 100%;
 height: 100%;
+}
+
+.overlay::after{
+content: 'Mountains View';
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 45px;
+background-color: black;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0.5;
+}
+
+.overlay:hover::after{
+    cursor: pointer;
 
 }
